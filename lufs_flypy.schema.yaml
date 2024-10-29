@@ -20,7 +20,7 @@ switches:
   - name: full_shape
     states: [半角, 全角]
   - name: ascii_punct
-    states: [．，, 。，]
+    states: [ 。，,．，]
   - name: traditionalization
     # reset: 0 # 默认状态: 0 简体 1 繁体
     states: [简, 繁]
@@ -30,6 +30,7 @@ switches:
 
 engine:
   processors:
+    - lua_processor@auto_put
     - ascii_composer # Windows 用户请解除此行注释，否则将会无法切换到英文输入
     - recognizer
     - lua_processor@select_character # lua 选词扩展，如需关闭请注释

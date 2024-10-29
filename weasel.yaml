@@ -9,9 +9,10 @@ config_version: "2024-01-04"
 app_options:
   cmd.exe:
     ascii_mode: true
-  conhost.exe:
+  bash:
     ascii_mode: true
-
+  qq:
+    ascii_mode: false
 show_notifications: true
 # 通知显示多长时间
 show_notifications_time: 1200
